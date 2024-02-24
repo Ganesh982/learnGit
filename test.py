@@ -21,7 +21,7 @@ def git_push(repo_path, file_or_directory, commit_message, external_files=[]):
         repo.git.commit('-m', commit_message)
 
         # Push changes to the remote repository
-        origin = repo.remote(name='origin')
+        origin = repo.remote(name='origin/main')
         origin.push()
 
         print("Pushed to Git successfully.")
